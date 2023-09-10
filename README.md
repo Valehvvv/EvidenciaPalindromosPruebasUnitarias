@@ -77,11 +77,12 @@ Paso 3: Ok! Si el método funciona ¿Qué puede malir sal? ;-) (15 mins.)
 3.1 Discutir en grupo el diseño de un plan de pruebas para este caso.
 
 3.2 A partir de su plan de pruebas, diseñe los casos de pruebas unitarias a implementar (aún no codifique nada!!!), considere al menos 5.
-R: probariamos solo usando una letra (ejemplo:aaa), utilizariamos solo numeros enteros, utilizar solo caracteres, entregar una cadena vacia (""), mezclas minúsculas con mayúsculas y combinar letras, numeros, caracteres y "".
+R: Probariamos solo usando una letra (ejemplo:aaa), utilizariamos solo numeros enteros, utilizar solo caracteres, entregar una cadena vacia (""), mezclas minúsculas con mayúsculas y combinar letras, numeros, caracteres y "".
 
 3.3 Estando seguros que sus casos de pruebas unitarias son amplios y relevantes, ahora impleméntelos en Java usando JUnit.
 
 3.4 ¿Qué resultados arrojan sus Test con estas entradas: “aca”, “acas”, “h”?
+R: En el caso de "aca" nos dira que es un palindromo, "acas" segun el codigo no es un palindromo y por ultimo "h" al ser solo una letra el comando de reverse no hara ningun cambio quedando la letra igual, aunque no se podria considerar palindromo debido a que este es una secuencia de letras que se lee igual de atras y adelante.
 
 Paso 4: Mejorando el método, probando más. (15 mins.)
 
@@ -91,19 +92,19 @@ Paso 4: Mejorando el método, probando más. (15 mins.)
 
 Input: 200 (número entero)
 
-Output: la cadena no es palindroma
+Output: la cadena no es palindroma, debido a que solo se pueden anotar string no numeros enteros(int)
 
 - Caso de prueba 2:
 
 Input: “” (cadena vacía)
 
-Output: la cadena es palindroma, aunque deberia entregar un no es plidroma ya que no entrega "nada" por lo que no es una frase ni una palabra
+Output: la cadena es palindroma, aunque deberia entregar un no es palidroma ya que no entrega "nada" por lo que no es una frase ni una palabra
 
 - Caso de prueba 3:
 
 Input: “aaabccbaaa”
 
-Output: aaabccbaaa
+Output: aaabccbaaa esta secuencia de letras es un palindromo
 
 - Caso de prueba 4:
 
@@ -115,14 +116,16 @@ Output: la cadena no es palindroma
 
 Input: “La tele letal”
 
-Output: la cadena no es palindroma, aunque por definicion la frase es palidroma
+Output: la cadena no es palindroma, aunque por definicion la frase es palidroma, esto se debe a que es una horaciony que tiene una mayuscula al inicio.
 
 4.2 De las pruebas analizadas, concluya y construya una versión mejorada de su método. Construya además nuevas pruebas unitarias considerando los casos anteriores y verifique sus resultados teóricos con los empíricos.
 
 ¿Qué consideraciones tomaron en cuenta?
+R: En el caso de las mayusculas buscamos un comando que transforme las letras mayusculas en minusculas para facilitar la evaluacion si es un palindromo
 
 ¿Qué mejoró en su método?
 
 ¿Qué rol jugaron las pruebas en mejorar su código?
+R: Buscaron encontrar si el codigo esta bien hecho, ademas de buscar excepciones para asi mejorarlos.
 
 Paso 5: Discutir experiencia y resultados con TODO el curso y Concluir!!! (15 mins.)
