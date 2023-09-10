@@ -1,36 +1,33 @@
 package org.example;
 import java.util.Scanner;
-
 public class Main {
-
-    public static boolean esPalindromo(String cadena) {
-        //linea 8 agregada, el comando toLowerCase() transforma las letras mayusculas en minusculas
-        cadena = cadena.toLowerCase();
-
-        String palabraInicial = cadena;
-
-        String[] caracteres = palabraInicial.split("");
-        StringBuilder reverso = new StringBuilder();
-        for (int i = caracteres.length - 1; i >= 0; i--) {
-            reverso.append(caracteres[i]);
-        }
-        String palabraFinal = reverso.toString();
-
-        return palabraInicial.equals(palabraFinal);
-    }
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese una cadena de texto: ");
-        String cadena = scanner.nextLine();
-        scanner.close();
-
-        boolean esPalindromo = esPalindromo(cadena);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese una palabra");
+        String palabra = sc.nextLine();
+        boolean esPalindromo = esPalindromo(palabra);
 
         if (esPalindromo) {
-            System.out.println(" es un palíndromo.");
+            System.out.println("la cadena es palindroma");
         } else {
-            System.out.println(" no es un palíndromo.");
+            System.out.println("la cadena no es palindroma");
         }
+        sc.close();
+    }
+
+    public static boolean esPalindromo(String palabra){
+        palabra = palabra.replaceAll("\\s+", "").toLowerCase();
+
+        int longitud = palabra.length();
+
+        for (int i = 0; i < longitud / 2; i++) {
+            if (palabra.charAt(i) != palabra.charAt(longitud - 1 - i)) {
+                return false;
+            }
+        }
+
+        return true;
+
+
     }
 }
