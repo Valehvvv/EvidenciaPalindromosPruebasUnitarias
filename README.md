@@ -169,6 +169,6 @@ R: 1. para el primer error encontrado en la primera prueba utilizamos el comando
 3. para el ultimo error encontrado agregamos que entegue una excepción cuando el usuario entregue números ya que estos no pueden ser considerados palídromos 
  
 ¿Qué rol jugaron las pruebas en mejorar su código?
-R: fueron un rol importante ya que gracias a las pruebas realizadas logramos evidenciar los errores que se presentaban y asi lograr que sea más preciso nuestro método 
+R: fueron un rol importante ya que gracias a las pruebas realizadas logramos evidenciar los errores que se presentaban y así lograr que sea más preciso nuestro método 
 
 Paso 5: Discutir experiencia y resultados con TODO el curso y Concluir!!! (15 mins.)
