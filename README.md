@@ -90,7 +90,7 @@ R: Probariamos solo usando una letra (ejemplo:aaa), utilizariamos solo numeros e
 3.3 Estando seguros que sus casos de pruebas unitarias son amplios y relevantes, ahora impleméntelos en Java usando JUnit.
 
 3.4 ¿Qué resultados arrojan sus Test con estas entradas: “aca”, “acas”, “h”?
-R: En el caso de "aca" nos dira que es un palindromo, "acas" segun el codigo no es un palindromo y por ultimo "h" al ser solo una letra el comando de reverse no hara ningun cambio quedando la letra igual, aunque no se podria considerar palindromo debido a que este es una secuencia de letras que se lee igual de atras y adelante.
+R: En el caso de "aca" nos dira que es un palindromo, "acas" segun el codigo no es un palindromo y por ultimo "h" al ser solo una letra el comando de reverse no hara ningun cambio quedando la letra igual, aunque no es un palíndromo, debido a que h es solo una letra pero el codigo nos entregara que es un palídromo
 
 Paso 4: Mejorando el método, probando más. (15 mins.)
 
@@ -100,8 +100,7 @@ Paso 4: Mejorando el método, probando más. (15 mins.)
 
 Input: 200 (número entero)
 
-Output: la cadena no es palindroma, debido a que solo se pueden anotar string no numeros enteros(int)
-
+Output: la cadena no es palindroma
 - Caso de prueba 2:
 
 Input: “” (cadena vacía)
