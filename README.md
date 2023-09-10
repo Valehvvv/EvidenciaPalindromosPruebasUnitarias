@@ -48,25 +48,33 @@ R: La función espalindromo pide una cadena como entrada, luego fija la variable
 package org.example;
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese una palabra");
-        String palabra = sc.nextLine();
-        boolean esPalindromo = esPalindromo(palabra);
+    public static boolean esPalindromo(String cadena) {
+        String palabraInicial = cadena;
 
-        if (esPalindromo) {
-            System.out.println("la cadena es palindroma");
-        } else {
-            System.out.println("la cadena no es palindroma");
+        String[] caracteres = palabraInicial.split("");
+        StringBuilder reverso = new StringBuilder();
+        for (int i = caracteres.length - 1; i >= 0; i--) {
+            reverso.append(caracteres[i]);
         }
-        sc.close();
+
+        String palabraFinal = reverso.toString();
+
+        return palabraInicial.equals(palabraFinal);
     }
 
-    public static boolean esPalindromo(String palabra){
-        String resultado = "";
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese una cadena de texto: ");
+        String cadena = scanner.nextLine();
+        scanner.close();
 
-        resultado = new StringBuilder(palabra).reverse().toString();
-        return palabra.equals(resultado);
+        boolean esPalindromo = esPalindromo(cadena);
+
+        if (esPalindromo) {
+            System.out.println(" es un palíndromo.");
+        } else {
+            System.out.println(" no es un palíndromo.");
+        }
     }
 }
 
@@ -116,16 +124,16 @@ Output: la cadena no es palindroma
 
 Input: “La tele letal”
 
-Output: la cadena no es palindroma, aunque por definicion la frase es palidroma, esto se debe a que es una horaciony que tiene una mayuscula al inicio.
+Output: la cadena no es palindroma, aunque por definicion la frase es palidroma, esto se debe a que es una oracion por lo que hay espacios en blanco y el codigo no lo toma como palindromo aunque este lo sea y ademas de que tiene una mayuscula al inicio. Por lo que hay que buscar o crear un metodo que junte los espacios en blanco para evaluar el palindromo y ademas de tranformar las letras mayusculas en minusculas.
 
 4.2 De las pruebas analizadas, concluya y construya una versión mejorada de su método. Construya además nuevas pruebas unitarias considerando los casos anteriores y verifique sus resultados teóricos con los empíricos.
 
 ¿Qué consideraciones tomaron en cuenta?
-R: En el caso de las mayusculas buscamos un comando que transforme las letras mayusculas en minusculas para facilitar la evaluacion si es un palindromo
-
+R: 
 ¿Qué mejoró en su método?
+R: En el caso de las mayusculas buscamos un comando que transforme las letras mayusculas en minusculas para facilitar la evaluacion de la palabra y si el usuario anota sin querer
 
 ¿Qué rol jugaron las pruebas en mejorar su código?
-R: Buscaron encontrar si el codigo esta bien hecho, ademas de buscar excepciones para asi mejorarlos.
+R: Buscamos que el codigo pueda realizar todas las intrucciones dadas, para asi ver que condiciones  tiene el codigo, para asi mejorarlo, aunque lo que anotemos sea un palindromo existira una condicion que hara que no entregue un resultado "correcto", en el caso de las mayusculas si el usuario sin darse cuenta anota una palabra palindroma con mayusculas esta pueda trasnsformar las letras mayusvulas en minusculas.
 
 Paso 5: Discutir experiencia y resultados con TODO el curso y Concluir!!! (15 mins.)
