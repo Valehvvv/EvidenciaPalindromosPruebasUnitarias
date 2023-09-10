@@ -166,9 +166,9 @@ R: 1. para el primer error encontrado en la primera prueba utilizamos el comando
         return palabraInicial.equals(palabraFinal);
     }  
 
-3. 
+3. para el ultimo error encontrado agregamos que entegue una excepción cuando el usuario entregue números ya que estos no pueden ser considerados palídromos 
  
 ¿Qué rol jugaron las pruebas en mejorar su código?
-R: Buscamos que el codigo pueda realizar todas las intrucciones dadas, para asi ver que condiciones  tiene el codigo, para asi mejorarlo, aunque lo que anotemos sea un palindromo existira una condicion que hara que no entregue un resultado "correcto", en el caso de las mayusculas si el usuario sin darse cuenta anota una palabra palindroma con mayusculas esta pueda trasnsformar las letras mayusvulas en minusculas.
+R: fueron un rol importante ya que gracias a las pruebas realizadas logramos evidenciar los errores que se presentaban y asi lograr que sea más preciso nuestro método 
 
 Paso 5: Discutir experiencia y resultados con TODO el curso y Concluir!!! (15 mins.)
