@@ -3,7 +3,10 @@ Evidencia: Caso Palíndromos - Pruebas Unitarias
 Caso: Palíndromos - somordnílaP :osaC
 
 ==========================
+palíndromo
+Del gr. παλίνδρομος palíndromos 'que recorre a la inversa'.
 
+1. m. Palabra o frase cuyas letras están dispuestas de tal manera que resulta la misma leída de izquierda a derecha que de derecha a izquierda; p. ej., anilina; dábale arroz a la zorra el abad.
 Paso 0: Condiciones iniciales.
 
 0.1 Se conformarán grupos de trabajo que desarrollarán el caso que se presenta a continuación.
@@ -89,14 +92,12 @@ Paso 4: Mejorando el método, probando más. (15 mins.)
 Input: 200 (número entero)
 
 Output: la cadena no es palindroma
-![image](https://github.com/Valehvvv/EvidenciaPalindromosPruebasUnitarias/assets/142462847/38880607-e823-48f4-8627-3885eb2614fe)
-
 
 - Caso de prueba 2:
 
 Input: “” (cadena vacía)
 
-Output: la cadena es palindroma
+Output: la cadena es palindroma, aunque deberia entregar un no es plidroma ya que no entrega "nada" por lo que no es una frase ni una palabra
 
 - Caso de prueba 3:
 
@@ -114,7 +115,7 @@ Output: la cadena no es palindroma
 
 Input: “La tele letal”
 
-Output: la cadena no es palindroma
+Output: la cadena no es palindroma, aunque por definicion la frase es palidroma
 
 4.2 De las pruebas analizadas, concluya y construya una versión mejorada de su método. Construya además nuevas pruebas unitarias considerando los casos anteriores y verifique sus resultados teóricos con los empíricos.
 
