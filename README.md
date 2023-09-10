@@ -89,6 +89,8 @@ Paso 4: Mejorando el método, probando más. (15 mins.)
 Input: 200 (número entero)
 
 Output: la cadena no es palindroma
+![image](https://github.com/Valehvvv/EvidenciaPalindromosPruebasUnitarias/assets/142462847/38880607-e823-48f4-8627-3885eb2614fe)
+
 
 - Caso de prueba 2:
 
