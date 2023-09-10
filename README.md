@@ -129,10 +129,45 @@ Output: la cadena no es palindroma, aunque por definicion la frase es palidroma,
 4.2 De las pruebas analizadas, concluya y construya una versión mejorada de su método. Construya además nuevas pruebas unitarias considerando los casos anteriores y verifique sus resultados teóricos con los empíricos.
 
 ¿Qué consideraciones tomaron en cuenta?
-R: 
+R: 1. la primera prueba que realizamos fue probar mayúsculas y minúsculas con la palabra "Oso" la cual es un palídromo pero nuestro método nos indicaba que no lo era.
+2. la segunda prueba fue solucionar el caso de las frases palidromas con la palabra "La tele letal" la cual es una frase palídroma sin embargo el método respondia lo cotrario.
+3. la ultima fue probar con numeros, por ejemplo con "202" nos entrega que es un palidromo pero al se numeros enteros deberia entregarnos una excepcion ya que no es una palabra ni una frase.
 ¿Qué mejoró en su método?
-R: En el caso de las mayusculas buscamos un comando que transforme las letras mayusculas en minusculas para facilitar la evaluacion de la palabra y si el usuario anota sin querer
+R: 1. para el primer error encontrado en la primera prueba utilizamos el comando toLowerCase() para cambiar las mayúsculas en minusculas en la variable palabraInicial y Palabra final
 
+ public static boolean esPalindromo(String cadena) {
+        cadena = cadena.toLowerCase();// la modificación (fernanda M.)
+        String palabraInicial = cadena;
+
+        String[] caracteres = palabraInicial.split("");
+        StringBuilder reverso = new StringBuilder();
+        for (int i = caracteres.length - 1; i >= 0; i--) {
+            reverso.append(caracteres[i]);
+        }
+
+        String palabraFinal = reverso.toString();
+
+        return palabraInicial.equals(palabraFinal);
+    }
+2. para el segundo error encontrado en la segunda prueba agregamos el comando replaceAll("\\s+", "") para eliminar todos los espacios en la variable palabraInicial y Palabra final
+
+     public static boolean esPalindromo(String cadena) {
+        cadena = cadena.toLowerCase().replaceAll("\\s+", "");//la modificación (Valentina H.)
+        String palabraInicial = cadena;
+
+        String[] caracteres = palabraInicial.split("");
+        StringBuilder reverso = new StringBuilder();
+        for (int i = caracteres.length - 1; i >= 0; i--) {
+            reverso.append(caracteres[i]);
+        }
+
+        String palabraFinal = reverso.toString();
+
+        return palabraInicial.equals(palabraFinal);
+    }  
+
+3. 
+ 
 ¿Qué rol jugaron las pruebas en mejorar su código?
 R: Buscamos que el codigo pueda realizar todas las intrucciones dadas, para asi ver que condiciones  tiene el codigo, para asi mejorarlo, aunque lo que anotemos sea un palindromo existira una condicion que hara que no entregue un resultado "correcto", en el caso de las mayusculas si el usuario sin darse cuenta anota una palabra palindroma con mayusculas esta pueda trasnsformar las letras mayusvulas en minusculas.
 
