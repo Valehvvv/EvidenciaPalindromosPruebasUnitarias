@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static boolean esPalindromo(String cadena) {
-        cadena = cadena.toLowerCase();
+        cadena = cadena.toLowerCase().replaceAll("\\s+", "");
         String palabraInicial = cadena;
 
         String[] caracteres = palabraInicial.split("");
