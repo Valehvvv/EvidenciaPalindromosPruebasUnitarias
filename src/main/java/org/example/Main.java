@@ -16,9 +16,18 @@ public class Main {
     }
 
     public static boolean esPalindromo(String palabra){
-        String resultado = "";
+        palabra = palabra.replaceAll("\\s+", "").toLowerCase();
 
-        resultado = new StringBuilder(palabra).reverse().toString();
-        return palabra.equals(resultado);
+        int longitud = palabra.length();
+
+        for (int i = 0; i < longitud / 2; i++) {
+            if (palabra.charAt(i) != palabra.charAt(longitud - 1 - i)) {
+                return false;
+            }
+        }
+
+        return true;
+
+
     }
 }
