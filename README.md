@@ -176,8 +176,9 @@ R: 1. para el primer error encontrado en la primera prueba utilizamos el comando
             System.err.println("Error: La cadena contiene números y no puede ser un palíndromo.");
             System.exit(1); // Salir con código de error  // modificacion hecha por mjose powell
    
-public static boolean contieneNumeros(String cadena) {
+  public static boolean contieneNumeros(String cadena) {
         return cadena.matches(".*\\d.*");  
+        }
  
 ¿Qué rol jugaron las pruebas en mejorar su código?
 R: fueron un rol importante ya que gracias a las pruebas realizadas logramos evidenciar los errores que se presentaban y así lograr que sea más preciso nuestro método 
