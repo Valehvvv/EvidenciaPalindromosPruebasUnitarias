@@ -47,8 +47,11 @@ R: La función espalindromo pide una cadena como entrada, luego fija la variable
 2.2 Construya en grupo ahora una versión Java que sea 100% equivalente en funcionalidad (lo bueno y lo malo) al anterior método.
 package org.example;
 import java.util.Scanner;
+
 public class Main {
+
     public static boolean esPalindromo(String cadena) {
+        cadena = cadena.toLowerCase();
         String palabraInicial = cadena;
 
         String[] caracteres = palabraInicial.split("");
@@ -68,6 +71,11 @@ public class Main {
         String cadena = scanner.nextLine();
         scanner.close();
 
+        if (contieneNumeros(cadena)) {
+            System.err.println("Error: La cadena contiene números y no puede ser un palíndromo.");
+            System.exit(1); // Salir con código de error
+        }
+
         boolean esPalindromo = esPalindromo(cadena);
 
         if (esPalindromo) {
@@ -76,7 +84,11 @@ public class Main {
             System.out.println(" no es un palíndromo.");
         }
     }
+    public static boolean contieneNumeros(String cadena) {
+        return cadena.matches(".*\\d.*");
+    }
 }
+
 
 2.3 Discutir resultados entre el grupo y con el profesor.
 
