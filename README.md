@@ -165,7 +165,19 @@ R: 1. para el primer error encontrado en la primera prueba utilizamos el comando
         return palabraInicial.equals(palabraFinal);
     }  
 
-3. para el ultimo error encontrado agregamos que entegue una excepción cuando el usuario entregue números ya que estos no pueden ser considerados palídromos 
+3. para el ultimo error encontrado agregamos que entegue una excepción cuando el usuario entregue números ya que estos no pueden ser considerados palídromos
+ public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese una cadena de texto: ");
+        String cadena = scanner.nextLine();
+        scanner.close();
+
+        if (contieneNumeros(cadena)) {
+            System.err.println("Error: La cadena contiene números y no puede ser un palíndromo.");
+            System.exit(1); // Salir con código de error  // modificacion hecha por mjose powell
+   
+public static boolean contieneNumeros(String cadena) {
+        return cadena.matches(".*\\d.*");  
  
 ¿Qué rol jugaron las pruebas en mejorar su código?
 R: fueron un rol importante ya que gracias a las pruebas realizadas logramos evidenciar los errores que se presentaban y así lograr que sea más preciso nuestro método 
